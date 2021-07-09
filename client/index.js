@@ -28,6 +28,17 @@ document.getElementById("fortuneButton").onclick = () => {
   });
 };
 
+document.getElementById("pokemonButton").onclick = () => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon?limit=200`).then((res) => {
+        console.log(res.data.results)
+        let randomI = Math.floor(Math.random()*res.data.results.length)
+        console.log(randomI)
+        let randomPokemon = res.data.results[randomI].name
+        console.log(randomPokemon)
+        alert(`You are ${randomPokemon}!`)
+    })
+}
+
 document.getElementById("addFortune").onsubmit = submitHandler;
 document.getElementById("addFortuneBtn").onclick = submitHandler;
 document.getElementById("changeThemeButton").onclick = changeThemeFunction;
