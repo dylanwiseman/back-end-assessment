@@ -9,10 +9,10 @@ const createFortune = (body) => {
 };
 
 const destruct = () => {
-    axios.delete(`${baseURL}fortune/`).then((res) => {
-        alert(res.data)
-    })
-}
+  axios.delete(`${baseURL}fortune/`).then((res) => {
+    alert(res.data);
+  });
+};
 
 document.getElementById("complimentButton").onclick = function () {
   axios.get(`${baseURL}compliment/`).then(function (response) {
@@ -35,11 +35,11 @@ document.getElementById("deleteFortunes").onclick = selfDestruct;
 
 function changeThemeFunction() {
   document.querySelector(".container").classList.toggle("dark");
-  document.querySelector("button").classList.toggle("dark")
-  document.getElementById("fortuneButton").classList.toggle("dark")
-  document.getElementById("changeThemeButton").classList.toggle("dark")
-  document.getElementById("deleteFortunes").classList.toggle("dark")
-  document.getElementById("addFortuneBtn").classList.toggle("dark")
+  document.querySelector("button").classList.toggle("dark");
+  document.getElementById("fortuneButton").classList.toggle("dark");
+  document.getElementById("changeThemeButton").classList.toggle("dark");
+  document.getElementById("deleteFortunes").classList.toggle("dark");
+  document.getElementById("addFortuneBtn").classList.toggle("dark");
 }
 
 function submitHandler(e) {
@@ -58,12 +58,12 @@ function submitHandler(e) {
 }
 
 function selfDestruct() {
-    console.log("self destruct initiated")
-    document.querySelector(".container").classList.add("red")
-    document.querySelector("button").classList.add("red")
-    document.getElementById("fortuneButton").classList.add("red")
-    document.getElementById("changeThemeButton").classList.add("red")
-    document.getElementById("deleteFortunes").classList.add("red")
-    document.getElementById("addFortuneBtn").classList.add("red")
-    destruct()
+  console.log("self destruct initiated");
+  document.querySelector(".container").classList.add("red");
+  document.querySelector("button").classList.add("red");
+  document.getElementById("fortuneButton").classList.add("red");
+  document.getElementById("changeThemeButton").classList.add("red");
+  document.getElementById("deleteFortunes").classList.add("red");
+  document.getElementById("addFortuneBtn").classList.add("red");
+  destruct();
 }
