@@ -1,0 +1,22 @@
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.red {
+    background-color: red;
+    color: red;
+    transition: ease-in 2s;
+}
+
+button {
+    margin: 1em;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 0;
+}
+
+body {
+    text-align: center;
+}
+
